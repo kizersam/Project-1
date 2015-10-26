@@ -7,6 +7,12 @@ var express = require("express"),
    bodyParser = require("body-parser");
    var mongoose = require("mongoose");
 
+mongoose.connect(
+  process.env.MONGOLAB_URI ||
+  process.env.MONGOHQ_URL ||
+  'mongodb://localhost/models/index.js' // plug in the db name you've been using
+);
+
 var db = require("./models/index.js");
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
