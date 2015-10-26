@@ -1,0 +1,25 @@
+.title-banner{
+	text-align: center;
+	padding-left: 100px;
+	padding-right:100px;
+	
+}
+.jumbotron {
+	margin: 0;
+	/*background-image: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQvRq-vPxmB0aX89dokeepIihkhMcZSacYVm1AMCIzkMqqgWwSxHA");*/
+	background-size: 100%;
+	background-image: url("http://www.peninsulardiesel.com/WP-PENTEST/wp-content/uploads/world-map-1024x450.gif");
+}
+body{
+	padding:0;
+}
+
+#map {
+  border-style: outset;
+  height: 500px;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  margin-top: 40px;
+  margin-bottom: 80px
+}
