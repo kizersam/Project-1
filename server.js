@@ -10,10 +10,10 @@ var express = require("express"),
 mongoose.connect(
   process.env.MONGOLAB_URI ||
   process.env.MONGOHQ_URL ||
-  'mongodb://localhost/models/index.js' // plug in the db name you've been using
+  'mongodb://localhost/demograph' // plug in the db name you've been using
 );
 
-var db = require("./models/index.js");
+// var db = require("./models/user.js");
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
