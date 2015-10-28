@@ -3,9 +3,16 @@
 
 // REQUIREMENTS //
 var express = require("express"),
-   app = express(),
-   bodyParser = require("body-parser");
-   var mongoose = require("mongoose");
+	app = express(),
+	bodyParser = require("body-parser");
+	mongoose = require("mongoose");
+	
+require("dotenv").load();
+
+var GMAP_KEY= process.env.GMAP_KEY;
+	
+var request = require("request");
+
 
 mongoose.connect(
   process.env.MONGOLAB_URI ||
