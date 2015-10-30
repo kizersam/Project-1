@@ -6,7 +6,7 @@ Companies or government agencies can create a "consumer profile" which accept mu
 density for these segments. It can be used for a wide range of purposes such as demographic studies for social programs, 
 market segmentation, targeted marketing campaigns, and labor force recruitment.
 
-2.
+2.https://afternoon-lowlands-5487.herokuapp.com/
 
 3.
 
