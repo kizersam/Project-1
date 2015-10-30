@@ -1,5 +1,5 @@
 var mongoose = require("mongoose");
-
+//mongoose.connect("mongodb://localhost/demograph");
 var Schema = mongoose.Schema;
 
 var survey = new Schema({

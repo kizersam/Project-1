@@ -8,13 +8,19 @@
 
     <div class="container">
         <h1>Map:</h1>
-        
+
+        <!-- <div id="floating-panel">
+      		<button onclick="toggleHeatmap()">Toggle Heatmap</button>
+      		<button onclick="changeGradient()">Change gradient</button>
+      		<button onclick="changeRadius()">Change radius</button>
+      		<button onclick="changeOpacity()">Change opacity</button>
+    	</div> -->
         <div id="map"></div>
     </div>
 
     <div class="container col-lg-6 col-md-6">
-  		<h2>Filters</h2>
-  		<h3> Demographics </h3>           
+  		<h2>Demographics</h2>
+  		          
   		<table class="table table-bordered">
     	<thead>
       		<tr>
@@ -22,74 +28,79 @@
         		<th>Attributes</th>
       		</tr>
     	</thead>
+    	<form>
     	<tbody>
+    		<tr>
+		    	<td>Gender</td>
+		    	<td id="gender"><div class="checkbox">
+		    		<label class="checkbox-inline"><input type="checkbox" value="Male">Male</label>
+					<label class="checkbox-inline"><input type="checkbox" value="Female">Female</label>
+				</div></td>
+			</tr>
       		<tr>
         		<td>Race</td>
-			    <td>
+			    <td id="race">
 			    	<div class="checkbox">
-			       		<label class="checkbox-inline"><input type="checkbox" value="">White</label>
-						<label class="checkbox-inline"><input type="checkbox" 	value="">African American/Black</label>
-						<label class="checkbox-inline"><input type="checkbox" value="">American Indian</label>
-						<label class="checkbox-inline"><input type="checkbox" value="">Alaska Native</label>
+			       		<label class="checkbox-inline"><input type="checkbox" value="White">White</label>
+						<label class="checkbox-inline"><input type="checkbox" 	value="African American/Black">African American/Black</label>
+						<label class="checkbox-inline"><input type="checkbox" value="American Indian">American Indian</label>
+						<label class="checkbox-inline"><input type="checkbox" value="Alaska Native">Alaska Native</label>
 					</div>
 					<div class="checkbox"> 
-						<label class="checkbox-inline"><input type="checkbox" value="">Asian</label>
-						<label class="checkbox-inline"><input type="checkbox" value="">Pacific Islander</label>
-						<label class="checkbox-inline"><input type="checkbox" value="">Other</label>
-						<label class="checkbox-inline"><input type="checkbox" value="">Two or More</label>
+						<label class="checkbox-inline"><input type="checkbox" value="Asian">Asian</label>
+						<label class="checkbox-inline"><input type="checkbox" value="Hawaiian/Pacific Islander">Pacific Islander</label>
+						<label class="checkbox-inline"><input type="checkbox" value="Other">Other</label>
+						<label class="checkbox-inline"><input type="checkbox" value="Two or More">Two or More</label>
 					</div>
 				</td>
       		</tr>
       		<tr>
 		        <td>Language</td>
-		        <td><div class="checkbox">
-		        	<label class="checkbox-inline"><input type="checkbox" value="">English</label>
-					<label class="checkbox-inline"><input type="checkbox" value="">Spanish</label>
-					<label class="checkbox-inline"><input type="checkbox" value="">European </label>
-					<label class="checkbox-inline"><input type="checkbox" value="">Asian</label>
-					<label class="checkbox-inline"><input type="checkbox" value="">Other</label>
+		        <td id="lang"><div class="checkbox">
+		        	<label class="checkbox-inline"><input type="checkbox" value="English">English</label>
+					<label class="checkbox-inline"><input type="checkbox" value="Spanish">Spanish</label>
+					<label class="checkbox-inline"><input type="checkbox" value="European">European </label>
+					<label class="checkbox-inline"><input type="checkbox" value="Asian">Asian</label>
+					<label class="checkbox-inline"><input type="checkbox" value="Other">Other</label>
 				</div></td>
 		    </tr>
 		    <tr>
 		        <td>Area of Birth</td>
-		        <td><div class="checkbox">
-		        	<label class="checkbox-inline"><input type="checkbox" value="">US</label>
-					<label class="checkbox-inline"><input type="checkbox" value="">PR/US Islands</label>
-					<label class="checkbox-inline"><input type="checkbox" value="">Latin America</label>
-					<label class="checkbox-inline"><input type="checkbox" value="">Asia</label>
+		        <td id="area"><div class="checkbox">
+		        	<label class="checkbox-inline"><input type="checkbox" value="US">US</label>
+					<label class="checkbox-inline"><input type="checkbox" value="PR and US Islands">PR/US Islands</label>
+					<label class="checkbox-inline"><input type="checkbox" value="Latin America">Latin America</label>
+					<label class="checkbox-inline"><input type="checkbox" value="Asia">Asia</label>
 				</div>
 				<div class="checkbox">
-					<label class="checkbox-inline"><input type="checkbox" value="">Europe</label>
-					<label class="checkbox-inline"><input type="checkbox" value="">Africa</label>
-					<label class="checkbox-inline"><input type="checkbox" value="">North America</label>
-					<label class="checkbox-inline"><input type="checkbox" value="">Oceania</label>
+					<label class="checkbox-inline"><input type="checkbox" value="Europe">Europe</label>
+					<label class="checkbox-inline"><input type="checkbox" value="Africa">Africa</label>
+					<label class="checkbox-inline"><input type="checkbox" value="North America">North America</label>
+					<label class="checkbox-inline"><input type="checkbox" value="Oceania">Oceania</label>
 				</div></td>
 		    </tr>
 		    <tr>
-		        <td>Marital Status</td>
-		        <td><div class="checkbox">
-		        	<label class="checkbox-inline"><input type="checkbox" value="">Married</label>
-					<label class="checkbox-inline"><input type="checkbox" value="">Widowed</label>
-					<label class="checkbox-inline"><input type="checkbox" value="">Divorced </label>
-					<label class="checkbox-inline"><input type="checkbox" value="">Seperated</label>
-					<label class="checkbox-inline"><input type="checkbox" value="">N/A</label>
+		    	<td>Has American Citizenship</td>
+		    	<td id="citiz"><div class="checkbox">
+		    		<label class="checkbox-inline"><input type="checkbox" value="Yes">Yes</label>
+					<label class="checkbox-inline"><input type="checkbox" value="No">No</label>
 				</div></td>
-		    </tr>
-		    <tr>
-		        <td>Presence of Child</td>
-		        <td><div class="checkbox">
-		        	<label class="checkbox-inline"><input type="checkbox" value="">Under 6 Years Old</label>
-					<label class="checkbox-inline"><input type="checkbox" value="">6-17 Years Old</label>
-					<label class="checkbox-inline"><input type="checkbox" value="">No Children</label>
+			</tr>
+			<tr>
+		    	<td>Has English Proficicency</td>
+		    	<td id="english"><div class="checkbox">
+		    		<label class="checkbox-inline"><input type="checkbox" value="Yes">Yes</label>
+					<label class="checkbox-inline"><input type="checkbox" value="No">No</label>
 				</div></td>
-		    </tr>
+			</tr>
+		    
     	</tbody>
   		</table>
 	</div>
 	
 	<div class="container col-lg-6 col-md-6">
-  		<h2>Filters</h2>
-  		<h3> Social Class </h3>           
+  		<h2>Social Class</h2>
+  		          
   		<table class="table table-bordered">
     	<thead>
       		<tr>
@@ -100,39 +111,214 @@
     	<tbody>
 			<tr>
 		        <td>Education</td>
-		        <td><div class="checkbox">
-		        	<label class="checkbox-inline"><input type="checkbox" value="">None</label>
-					<label class="checkbox-inline"><input type="checkbox" value="">Lower School</label>
-					<label class="checkbox-inline"><input type="checkbox" value="">Middle School</label>
-					<label class="checkbox-inline"><input type="checkbox" value="">High School</label>
+		        <td id= "edu"><div class="checkbox">
+		        	<label class="checkbox-inline"><input type="checkbox" value="None">None</label>
+					<label class="checkbox-inline"><input type="checkbox" value="Lower School">Lower School</label>
+					<label class="checkbox-inline"><input type="checkbox" value="Middle School">Middle School</label>
+					<label class="checkbox-inline"><input type="checkbox" value="High School">High School</label>
 				</div>
 				<div class="checkbox">
-					<label class="checkbox-inline"><input type="checkbox" value="">Some High School</label>
-					<label class="checkbox-inline"><input type="checkbox" value="">GED</label>
-					<label class="checkbox-inline"><input type="checkbox" value="">Some College</label>
-					<label class="checkbox-inline"><input type="checkbox" value="">Bachelors/Associate's</label>
+					<label class="checkbox-inline"><input type="checkbox" value="Some High School">Some High School</label>
+					<label class="checkbox-inline"><input type="checkbox" value="GED">GED</label>
+					<label class="checkbox-inline"><input type="checkbox" value="Some College">Some College</label>
+					<label class="checkbox-inline"><input type="checkbox" value="Bachelors/Associate's Degree">Bachelors/Associate's</label>
 				</div>
 				<div class="checkbox">
-					<label class="checkbox-inline"><input type="checkbox" value="">Masters/Doctorate</label>
+					<label class="checkbox-inline"><input type="checkbox" value="Masters/Doctorate">Masters/Doctorate</label>
 				</div></td>
 		    </tr>
 		    <tr>
 		        <td>Employment Class</td>
-		        <td><div class="checkbox">
-		        	<label class="checkbox-inline"><input type="checkbox" value="">For-Profit Company</label>
-					<label class="checkbox-inline"><input type="checkbox" value="">Not-for-Profit Company</label>
-					<label class="checkbox-inline"><input type="checkbox" value="">Government</label>
+		        <td id="class"><div class="checkbox">
+		        	<label class="checkbox-inline"><input type="checkbox" value="For-Profit Company">For-Profit Company</label>
+					<label class="checkbox-inline"><input type="checkbox" value="Not-for-Profit Company">Not-for-Profit Company</label>
+					<label class="checkbox-inline"><input type="checkbox" value="Government">Government</label>
 				</div>
 				<div class="checkbox">
-					<label class="checkbox-inline"><input type="checkbox" value="">Self-Employed</label>
-					<label class="checkbox-inline"><input type="checkbox" value="">Unemployed/Not in Labor Force</label>
+					<label class="checkbox-inline"><input type="checkbox" value="Self-Employed">Self-Employed</label>
+					<label class="checkbox-inline"><input type="checkbox" value="Unemployed/Not in Labor Force">Unemployed/Not in Labor Force</label>
 				</div></td>
 		    </tr>
+		    <tr>
+		    	<td>Transportation to Work</td>
+		    	<td id="transport"><div class="checkbox">
+		    		<label class="checkbox-inline"><input type="checkbox" value="Car/Truck/Van">Car/Truck/Van</label>
+					<label class="checkbox-inline"><input type="checkbox" value="Public">Public</label>
+					<label class="checkbox-inline"><input type="checkbox" value="Motorcycle">Motorcycle</label>
+					<label class="checkbox-inline"><input type="checkbox" value="Bicycle">Bicycle</label>
+					<label class="checkbox-inline"><input type="checkbox" value="Walked">Walked</label>
+				</div></td>
+			</tr>
+			<tr>
+		    	<td>Heads of Household Employment</td>
+		    	<td id="hhemploy"><div class="checkbox">
+		    		<label class="checkbox-inline"><input type="checkbox" value="Both">Both</label>
+					<label class="checkbox-inline"><input type="checkbox" value="One">One</label>
+					<label class="checkbox-inline"><input type="checkbox" value="Neither">Neither</label>
+				</div></td>
+			</tr>
+			<tr>
+		    	<td>On Food Stamps</td>
+		    	<td id="stamps"><div class="checkbox">
+		    		<label class="checkbox-inline"><input type="checkbox" value="Yes">Yes</label>
+					<label class="checkbox-inline"><input type="checkbox" value="No">No</label>
+				</div></td>
+			</tr>
+    	</tbody>
+    	</table>
+    </div>
+    <div class="container col-lg-6 col-md-6">
+  		<h2>Family Information</h2>
+  		          
+  		<table class="table table-bordered">
+    	<thead>
+      		<tr>
+        		<th>Key</th>
+        		<th>Attributes</th>
+      		</tr>
+    	</thead>
+    	<tbody>
+    		<tr>
+		    	<td>Child Present</td>
+		    	<td id="child"><div class="checkbox">
+		    		<label class="checkbox-inline"><input type="checkbox" value="Under 6 Years">Under 6 Years</label>
+					<label class="checkbox-inline"><input type="checkbox" value="6-17 Years">6-17 Years</label>
+					<label class="checkbox-inline"><input type="checkbox" value="No Children">No Children</label>
+				</div></td>
+			</tr>
+			<tr>
+		        <td>Marital Status</td>
+		        <td id="marital"><div class="checkbox">
+		        	<label class="checkbox-inline"><input type="checkbox" value="Married">Married</label>
+					<label class="checkbox-inline"><input type="checkbox" value="Widowed">Widowed</label>
+					<label class="checkbox-inline"><input type="checkbox" value="Divorced">Divorced </label>
+					<label class="checkbox-inline"><input type="checkbox" value="Seperated">Seperated</label>
+					<label class="checkbox-inline"><input type="checkbox" value="Never Married">N/A</label>
+				</div></td>
+		    </tr>
+			<tr>
+		    	<td>Same-Sex Couple</td>
+		    	<td id="samesex"><div class="checkbox">
+		    		<label class="checkbox-inline"><input type="checkbox" value="Yes">Yes</label>
+					<label class="checkbox-inline"><input type="checkbox" value="No">No</label>
+				</div></td>
+			</tr>
+			<tr>
+		    	<td>Gave Birth in Last 12mo</td>
+		    	<td id="birth"><div class="checkbox">
+		    		<label class="checkbox-inline"><input type="checkbox" value="Yes">Yes</label>
+					<label class="checkbox-inline"><input type="checkbox" value="No">No</label>
+				</div></td>
+			</tr>
 
     	</tbody>
     	</table>
     </div>
-   
-      
+    <div class="container col-lg-6 col-md-6">
+  		<h2>Health</h2>
+  		          
+  		<table class="table table-bordered">
+    	<thead>
+      		<tr>
+        		<th>Key</th>
+        		<th>Attributes</th>
+      		</tr>
+    	</thead>
+    	<tbody>
+    		<tr>
+		    	<td>Health Insurance</td>
+		    	<td id="health"><div class="checkbox">
+		    		<label class="checkbox-inline"><input type="checkbox" value="Yes">Yes</label>
+					<label class="checkbox-inline"><input type="checkbox" value="No">No</label>
+				</div></td>
+			</tr>
+			<tr>
+		    	<td>Hearing Disability</td>
+		    	<td id="hearing"><div class="checkbox">
+		    		<label class="checkbox-inline"><input type="checkbox" value="Yes">Yes</label>
+					<label class="checkbox-inline"><input type="checkbox" value="No">No</label>
+				</div></td>
+			</tr>
+			<tr>
+		    	<td>Vision Disability</td>
+		    	<td id="vision"><div class="checkbox">
+		    		<label class="checkbox-inline"><input type="checkbox" value="Yes">Yes</label>
+					<label class="checkbox-inline"><input type="checkbox" value="No">No</label>
+				</div></td>
+			</tr>
+			<tr>
+		    	<td>Physical Disability</td>
+		    	<td id="phys"><div class="checkbox">
+		    		<label class="checkbox-inline"><input type="checkbox" value="Yes">Yes</label>
+					<label class="checkbox-inline"><input type="checkbox" value="No">No</label>
+				</div></td>
+			</tr>
+    	</tbody>
+    	</table>
+    </div>
+     <div class="container col-lg-6 col-md-6">
+  		<h2>Employment Information</h2>
+  		          
+  		<table class="table table-bordered">
+    	<thead>
+      		<tr>
+        		<th>Key</th>
+        		<th>Attributes</th>
+      		</tr>
+    	</thead>
+    	<tbody>
+    		<tr>
+		    	<td>Laid Off</td>
+		    	<td id="layoff"><div class="checkbox">
+		    		<label class="checkbox-inline"><input type="checkbox" value="Yes">Yes</label>
+					<label class="checkbox-inline"><input type="checkbox" value="No">No</label>
+				</div></td>
+			</tr>
+    		<tr>
+		    	<td>Looking For Work</td>
+		    	<td id="looking"><div class="checkbox">
+		    		<label class="checkbox-inline"><input type="checkbox" value="Yes">Yes</label>
+					<label class="checkbox-inline"><input type="checkbox" value="No">No</label>
+				</div></td>
+			</tr>
+			<tr>
+		    	<td>Last Worked</td>
+		    	<td id="last"><div class="checkbox">
+		    		<label class="checkbox-inline"><input type="checkbox" value="Within past 12 Months">Within Past 12 Months</label>
+					<label class="checkbox-inline"><input type="checkbox" value="1-5 years ago">1-5 Years Ago</label>
+					<label class="checkbox-inline"><input type="checkbox" value="Over 5 years ago">Over 5 Years Ago</label>
+				</div></td>
+			</tr>
+			<tr>
+		    	<td>In Military</td>
+		    	<td id="milit"><div class="checkbox">
+		    		<label class="checkbox-inline"><input type="checkbox" value="Yes">Yes</label>
+					<label class="checkbox-inline"><input type="checkbox" value="No">No</label>
+				</div></td>
+			</tr>
+			<tr>
+		        <td>Time of Departure for Work</td>
+		        <td id="time"><div class="checkbox">
+		        	<label class="checkbox-inline"><input type="checkbox" value="4-6AM">4-6AM</label>
+					<label class="checkbox-inline"><input type="checkbox" value="6-8AM">6-8AM</label>
+					<label class="checkbox-inline"><input type="checkbox" value="8-10AM">8-10AM</label>
+					<label class="checkbox-inline"><input type="checkbox" value="10-12PM">10-12PM</label>
+				</div>
+				<div class="checkbox">
+					<label class="checkbox-inline"><input type="checkbox" value="12-2PM">12-2PM</label>
+					<label class="checkbox-inline"><input type="checkbox" value="2-4PM">2-4PM</label>
+					<label class="checkbox-inline"><input type="checkbox" value="4-6PM">4-6PM</label>
+					<label class="checkbox-inline"><input type="checkbox" value="6-8PM">6-8PM</label>
+				</div></td>
+		    </tr>
+    	</tbody>
+    	</table>
+    </div>
+    <p id="mybuttons">
+  		<button type="submit" class="btn btn-primary btn-lg">Submit</button>
+  		<button type="button" id= "clear" class="btn btn-danger btn-lg">Delete</button>
+	</p>
+   </form>
+     
   </body>
 </html>

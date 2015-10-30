@@ -1,8 +1,8 @@
 var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/demograph");
+//mongoose.connect("mongodb://localhost/demograph");
 
 
-//User=require("./user");
+
  
 var Seed = require("./seed.js");
 module.exports.Seed = Seed;
@@ -13,4 +13,5 @@ module.exports.Survey = Survey;
 
 
 
+//User=require("./user");
 //module.exports.User = User;
